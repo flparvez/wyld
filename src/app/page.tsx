@@ -1,8 +1,9 @@
 import { ThreeDCardDemo } from "@/components/3dcard";
-import Header from "@/components/Header";
+
 import HeroSection from "@/components/Hero";
+
 import Navbar from "@/components/Navbar";
-import { TextRevealCardPreview } from "@/components/TextReveal";
+
 import { MacbookScrollDemo } from "@/components/macbook";
 
 import { Button } from "@/components/ui/moving-border";
@@ -16,10 +17,11 @@ const Home = () => {
       <Navbar />
 
       <HeroSection />
-      <TextRevealCardPreview />
+
       <MacbookScrollDemo />
+
       <ThreeDCardDemo />
-      <ThreeDCardDemo />
+
       {/* <HeroParallaxDemo /> */}
 
       <div className="fixed py-4  w-full flex items-end justify-end right-5 bottom-0">
