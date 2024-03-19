@@ -22,7 +22,7 @@ const Home = () => {
       <ThreeDCardDemo />
       {/* <HeroParallaxDemo /> */}
 
-      <div className="fixed bottom-0  w-full flex items-end justify-end right-4 bottom-3">
+      <div className="fixed py-4  w-full flex items-end justify-end right-5 bottom-0">
         <Button>
           <Link href="/join">Apply Now</Link>
         </Button>

@@ -6,8 +6,8 @@ import wyld from "../../public/wyld.jpg";
 
 export function MacbookScrollDemo() {
   return (
-    <div className="overflow-hidden bg-[#0B0B0F] w-full">
-      <MacbookScroll
+    <div className="overflow-hidden py-0 my-0 w-full bg-[#0B0B0F] ">
+      <MacbookScroll 
         title={
           <span>
             Buy Post Earn <br /> No kidding.
