@@ -74,7 +74,7 @@ function Navbar() {
       >
         <div className="flex w-full items-center justify-end"></div>
 
-        <div className="flex-col py-4 bg-[#000000]">
+        <div className="flex-col py-4 text-white bg-[#000000]">
           <ul>
             <Link href="/">
               <li
