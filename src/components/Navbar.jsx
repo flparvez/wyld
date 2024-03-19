@@ -56,7 +56,7 @@ function Navbar() {
           </ul>
         </div>
 
-        <div className="sm:hidden cursor-pointer pl-24">
+        <div className="sm:hidden text-white cursor-pointer pl-24">
           {menuOpen ? (
             <AiOutlineClose onClick={handleNav} size={30} />
           ) : (
