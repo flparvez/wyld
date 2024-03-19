@@ -17,7 +17,7 @@ function Navbar() {
     setMenuOpen(!menuOpen);
   };
   return (
-    <nav className="fixed z-10 w-full h-24 shadow-xl  bg-[#020d17] ">
+    <nav className="fixed z-10 w-full h-16 shadow-xl  bg-[#020d17] ">
       <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
         <div className="w-14">
           <Image
@@ -55,36 +55,26 @@ function Navbar() {
             </Link>
           </ul>
         </div>
-        <div className="sm:hidden cursor-pointer">
-          <ul className="flex ">
-            <Link href="/login">
-              <li className="ml-10 uppercase hover:border-b text-xl">Login</li>
-            </Link>
 
-            <Link href="/register">
-              <li className="ml-10 uppercase hover:border-b text-xl">Signup</li>
-            </Link>
-          </ul>
-        </div>
-        <div onClick={handleNav} className="sm:hidden cursor-pointer pl-24">
-          <AiOutlineMenu size={25} />
+        <div className="sm:hidden cursor-pointer pl-24">
+          {menuOpen ? (
+            <AiOutlineClose onClick={handleNav} size={30} />
+          ) : (
+            <AiOutlineMenu onClick={handleNav} size={30} />
+          )}
         </div>
       </div>
 
       <div
         className={
           menuOpen
-            ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#020d17] p-10 case-in duration-500"
+            ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#000000] p-10 case-in duration-500"
             : "fixed left-[-100%] top-0 p-10 case-in duration-500"
         }
       >
-        <div className="flex w-full items-center justify-end">
-          <div onClick={handleNav} className="cursor-pointer">
-            <AiOutlineClose size={25} />
-          </div>
-        </div>
+        <div className="flex w-full items-center justify-end"></div>
 
-        <div className="flex-col py-4 bg-[#020d17]">
+        <div className="flex-col py-4 bg-[#000000]">
           <ul>
             <Link href="/">
               <li
