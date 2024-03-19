@@ -8,7 +8,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-[#000000]">
       <Navbar />
 
       <HeroSection />
