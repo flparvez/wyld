@@ -88,7 +88,9 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <div key={idx}>
-            <h2 className="text-center text-2xl font-medium">{item.name}</h2>
+            <h2 className="text-center text-2xl text-white font-medium">
+              {item.name}
+            </h2>
             <Image
               className="h-full w-full"
               src={item.img}
