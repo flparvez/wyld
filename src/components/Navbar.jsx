@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import Logo from "../../public/logo.jpeg";
+import Logo from "../../public/logo.png";
 import Link from "next/link";
 import {
   AiOutlineMenu,
@@ -20,7 +20,7 @@ function Navbar() {
   return (
     <nav className="fixed z-10 w-full h-16 shadow-xl  bg-[#020d17] ">
       <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
-        <div className="w-14">
+        <div className="w-36">
           <Image
             src={Logo}
             alt=""

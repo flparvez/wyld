@@ -50,6 +50,10 @@ const config: Config = {
   ],
   darkMode: 'class',
   theme: {
+    fontFamily: {
+      sans: [' Poppins ', 'sans-serif'], // Replace 'Graphik' with your font name
+      // Add more custom fonts as needed
+    },
     extend: {
       animation:{
         spotlight: "spotlight 2s ease .75s 1 forwards",
