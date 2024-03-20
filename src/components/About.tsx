@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   return (
     <div>
-      <h2 className="text-9xl bg-[#000000] py-4 text-center font-medium font-sans uppercase">
+      <h2 className="text-8xl bg-[#000000] text-white py-4 text-center font-medium font-sans uppercase">
         WYLD?
       </h2>
       <p className="text-2xl font-light px-4 py-4">
