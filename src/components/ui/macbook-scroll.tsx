@@ -76,7 +76,7 @@ export const MacbookScroll = ({
           translateY: textTransform,
           opacity: textOpacity,
         }}
-        className="text-white text-3xl font-bold mb-20 text-center"
+        className="text-white  text-3xl mb-24 font-bold  text-center"
       >
         {title || (
           <span>
@@ -160,25 +160,6 @@ export const Lid = ({
           </span>
         </div>
       </div>
-      <motion.div
-        style={{
-          scaleX: scaleX,
-          scaleY: scaleY,
-          rotateX: rotate,
-          translateY: translate,
-          transformStyle: "preserve-3d",
-          transformOrigin: "top",
-        }}
-        className="h-96 w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
-      >
-        <div className="absolute inset-0 bg-[#272729] rounded-lg" />
-        <Image
-          src={wyld}
-          alt=" logo"
-          fill
-          className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
-        />
-      </motion.div>
     </div>
   );
 };

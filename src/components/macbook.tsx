@@ -2,19 +2,14 @@ import React from "react";
 import { MacbookScroll } from "./ui/macbook-scroll";
 import Link from "next/link";
 import Image from "next/image";
-import wyld from "../../public/wyld.jpg";
 
 export function MacbookScrollDemo() {
   return (
-    <div className="overflow-hidden  w-full bg-[#0B0B0F] ">
+    <div className="overflow-hidden  w-full bg-[#02101d] ">
       <MacbookScroll
-        title={
-          <span>
-            Buy Post Earn <br /> No kidding.
-          </span>
-        }
+        title={<span>Buy Post Earn</span>}
         badge={
-          <Link href="https://peerlist.io/manuarora">
+          <Link href="/">
             <Badge className="h-10 w-10 transform -rotate-12" />
           </Link>
         }

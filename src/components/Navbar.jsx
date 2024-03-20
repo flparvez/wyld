@@ -10,6 +10,7 @@ import {
   AiOutlineFacebook,
   AiOutlineTwitter,
 } from "react-icons/ai";
+import { CgMenuRightAlt } from "react-icons/cg";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -60,7 +61,7 @@ function Navbar() {
           {menuOpen ? (
             <AiOutlineClose onClick={handleNav} size={30} />
           ) : (
-            <AiOutlineMenu onClick={handleNav} size={30} />
+            <CgMenuRightAlt onClick={handleNav} size={30} />
           )}
         </div>
       </div>
