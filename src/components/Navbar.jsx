@@ -69,11 +69,11 @@ function Navbar() {
       <div
         className={
           menuOpen
-            ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#000000] p-10 case-in duration-500"
-            : "fixed left-[-100%] top-0 p-10 case-in duration-500"
+            ? "fixed left-0 top-0 w-[70%] sm:hidden h-screen bg-[#000000] p-10 case-in duration-500"
+            : "fixed left-[-100%] top-0 p-10 case-in duration-600"
         }
       >
-        <div className="flex w-full items-center justify-end"></div>
+        <div className="flex w-full items-center justify-center"></div>
 
         <div className="flex-col py-4 text-white bg-[#000000]">
           <ul>

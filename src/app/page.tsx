@@ -1,5 +1,4 @@
-import { ThreeDCardDemo } from "@/components/3dcard";
-
+import { CardHoverEffect } from "@/components/Card";
 import HeroSection from "@/components/Hero";
 
 import Navbar from "@/components/Navbar";
@@ -20,7 +19,7 @@ const Home = () => {
 
       <MacbookScrollDemo />
 
-      <ThreeDCardDemo />
+      <CardHoverEffect />
 
       {/* <HeroParallaxDemo /> */}
 
