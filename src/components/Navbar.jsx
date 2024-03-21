@@ -21,18 +21,20 @@ function Navbar() {
     <nav className="fixed z-10 w-full h-16 shadow-xl  bg-[#020d17] ">
       <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
         <div className="w-36">
-          <Image
-            src={Logo}
-            alt=""
-            width={205}
-            height={25}
-            className="cursor-pointer"
-            priority
-          />
+          <Link href="/">
+            <Image
+              src={Logo}
+              alt=""
+              width={205}
+              height={25}
+              className="cursor-pointer"
+              priority
+            />
+          </Link>
         </div>
 
         <div className="hidden sm:flex">
-          <ul className="hidden sm:flex">
+          <ul className="hidden sm:flex text-white">
             <Link href="/about">
               <li className="ml-10 uppercase hover:border-b text-xl">Brands</li>
             </Link>
