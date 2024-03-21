@@ -74,7 +74,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20   overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
@@ -88,11 +88,8 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <div key={idx}>
-            <h2 className="text-center text-2xl text-white font-medium">
-              {item.name}
-            </h2>
             <Image
-              className="h-full w-full"
+              className="h-16 w-16"
               src={item.img}
               width={500}
               height={400}
