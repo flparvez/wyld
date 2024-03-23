@@ -3,8 +3,8 @@ import React from "react";
 
 function page() {
   return (
-    <div>
-      <h2>This is test</h2>
+    <div className="bg-black">
+      <h2 className="text-white text-center">Apply Form</h2>
       <JoinForm />
     </div>
   );

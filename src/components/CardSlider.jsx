@@ -36,7 +36,7 @@ const CardSlider = ({ items }) => {
       >
         {items.map((item, index) => (
           <div key={index} className="flex-shrink-0 w-full px-4  bg-black my-4">
-            <h3 className="text-3xl font-bold mb-2 text-white font-sans text-center">
+            <h3 className="text-3xl font-bold mb-2 animate-bounce text-white font-sans text-center">
               {item.name}
             </h3>
             <div className="flex justify-center text-center">

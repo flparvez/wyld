@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function MacbookScrollDemo() {
   return (
-    <div className="overflow-hidden  w-full bg-[#02101d] ">
+    <div className="overflow-hidden  w-full bg-[#000000] ">
       <MacbookScroll
         title={<span>Buy Post Earn</span>}
         badge={
