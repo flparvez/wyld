@@ -18,10 +18,10 @@ function HeroSection() {
         </p>
 
         <div className="mt-4">
-          <Link href={"/courses"}>
+          <Link href={"/join"}>
             <Button
               borderRadius="1rem"
-              className=" bg-black  text-white border-neutral-200 dark:border-slate-800"
+              className=" bg-[#c760dd]  text-white border-neutral-200 dark:border-slate-800"
             >
               Apply Now
             </Button>

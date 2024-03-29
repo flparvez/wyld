@@ -3,7 +3,7 @@ import HeroSection from "@/components/Hero";
 import Marquee from "../components/Marquee";
 import { MacbookScrollDemo } from "@/components/macbook";
 import { Button } from "@/components/ui/moving-border";
-import Image from "next/image";
+import CardCarousel from "../components/CardCarasol";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import CardSlider from "@/components/CardSlider";
@@ -13,6 +13,26 @@ import { InfiniteMovingCard } from "@/components/MovieCard";
 import TextReveal from "../components/TextReveal";
 
 const Home = () => {
+  const heros = [
+    {
+      id: 1,
+      text1: "The World's 1st social currency card",
+      text2: "FUELLED BY LIKES & SHARE",
+    },
+
+    // {
+    //   id: 2,
+    //   text1: "encash your influence",
+    //   text2: "BECause your word is your worth",
+    // },
+
+    // {
+    //   id: 3,
+    //   text1: "UPTO 100% cashback ",
+    //   text2: "More followers = More CASHBACK",
+    // },
+  ];
+
   const sliders = [
     {
       id: 1,
@@ -38,6 +58,7 @@ const Home = () => {
 
   return (
     <div className="bg-[#000000]">
+      <CardCarousel items={heros} />
       <HeroSection />
       <div className="flex justify-center text-center bg-[#000000]">
         <h1 className="font-bold text-white uppercase py-12 shadow text-9xl">
