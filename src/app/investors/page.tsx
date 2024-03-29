@@ -35,12 +35,6 @@ function page() {
 
   const investors = [
     {
-      img: "https://assets-global.website-files.com/61fd17e773e51667344c6e7e/65b41bfe46efda4a0bd031b7_Anupam-p-500.jpeg",
-      name: "Anupam Mittal",
-      work: "Shaadi.com",
-    },
-
-    {
       img: "https://assets-global.website-files.com/61fd17e773e51667344c6e7e/6204b298cea92bcff18186d2_6.%20Aman%20Gupta%2C%20Boat.jpg",
       name: "Aman Gupta",
       work: "boAt",
@@ -75,6 +69,11 @@ function page() {
       name: "Madhusudanan R",
       work: "M2P Fintech",
     },
+    {
+      img: "https://assets-global.website-files.com/61fd17e773e51667344c6e7e/65b41bfe46efda4a0bd031b7_Anupam-p-500.jpeg",
+      name: "Anupam Mittal",
+      work: "Shaadi.com",
+    },
   ];
   return (
     <div className="bg-black px-4 py-4">
@@ -88,11 +87,11 @@ function page() {
             Venture funds
           </h1>
 
-          <div className="grid sm:grid-cols-3 grid-cols-2 gap-5 my-2 text-white">
+          <div className="grid sm:grid-cols-3 grid-cols-2 gap-4 my-2 text-white">
             {items.map((item, key) => (
               <div key={key} className="justify-center my-2  text-center">
                 <Image
-                  className="w-auto h-[100%]"
+                  className="h-[100%] w-auto object-cover "
                   src={item.img}
                   width={200}
                   height={200}
@@ -106,11 +105,11 @@ function page() {
           <h1 className="text-2xl uppercase mt-16 text-white text-start">
             ANgel Investors
           </h1>
-          <div className="grid sm:grid-cols-3 grid-cols-2 gap-7 my-2 text-white">
+          <div className="grid sm:grid-cols-3 grid-cols-2 gap-6  text-white">
             {investors.map((item, key) => (
               <div key={key} className="justify-center my-2   text-center">
                 <Image
-                  className="w-auto h-[100%]"
+                  className="h-[100%] w-auto object-cover"
                   src={item.img}
                   width={200}
                   height={200}
