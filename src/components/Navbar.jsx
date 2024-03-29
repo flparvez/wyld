@@ -43,7 +43,7 @@ function Navbar() {
               <li className="ml-10 uppercase hover:border-b text-xl">Blogs</li>
             </Link>
 
-            <Link href="/about">
+            <Link href="/investors">
               <li className="ml-10 uppercase hover:border-b text-xl">
                 Investors
               </li>
@@ -88,7 +88,7 @@ function Navbar() {
               </li>
             </Link>
 
-            <Link href="/">
+            <Link href="/investors">
               <li
                 onClick={() => setMenuOpen(false)}
                 className="py-4 cursor-pointer"

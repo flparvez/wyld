@@ -59,7 +59,7 @@ const Home = () => {
   return (
     <div className="bg-[#000000]">
       <CardCarousel items={heros} />
-      <HeroSection />
+      {/* <HeroSection /> */}
       <div className="flex justify-center text-center bg-[#000000]">
         <h1 className="font-bold text-white uppercase py-12 shadow text-9xl">
           <span className="mr-10">Buy</span> <br />{" "}
