@@ -18,7 +18,7 @@ function Navbar() {
     setMenuOpen(!menuOpen);
   };
   return (
-    <nav className="fixed z-10 w-full h-16 shadow-xl  bg-[#020d17] ">
+    <nav className="fixed z-10 w-full h-16 shadow-xl  bg-black ">
       <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
         <div className="w-36">
           <Link href="/">
@@ -35,11 +35,11 @@ function Navbar() {
 
         <div className="hidden sm:flex">
           <ul className="hidden sm:flex text-white">
-            <Link href="/about">
+            <Link href="/brands">
               <li className="ml-10 uppercase hover:border-b text-xl">Brands</li>
             </Link>
 
-            <Link href="/about">
+            <Link href="/blogs">
               <li className="ml-10 uppercase hover:border-b text-xl">Blogs</li>
             </Link>
 
@@ -71,7 +71,7 @@ function Navbar() {
       <div
         className={
           menuOpen
-            ? "fixed left-0 top-0 w-[70%] sm:hidden h-screen bg-[#000000] p-10 case-in duration-600"
+            ? "fixed left-0 top-0 w-[70%]  sm:hidden h-screen bg-[#000000] p-10 case-in duration-600"
             : "fixed left-[-100%] top-0 p-10 case-in duration-600"
         }
       >
@@ -79,7 +79,7 @@ function Navbar() {
 
         <div className="flex-col py-4 text-white bg-[#000000]">
           <ul>
-            <Link href="/">
+            <Link href="/brands">
               <li
                 onClick={() => setMenuOpen(false)}
                 className="py-4 cursor-pointer"
@@ -105,7 +105,7 @@ function Navbar() {
                 Academy
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/faqs">
               <li
                 onClick={() => setMenuOpen(false)}
                 className="py-4 cursor-pointer"
