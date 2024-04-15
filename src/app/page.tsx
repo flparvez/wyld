@@ -1,5 +1,5 @@
 import { CardHoverEffect } from "@/components/Card";
-import HeroSection from "@/components/Hero";
+
 import Marquee from "../components/Marquee";
 import { MacbookScrollDemo } from "@/components/macbook";
 import { Button } from "@/components/ui/moving-border";
@@ -59,13 +59,14 @@ const Home = () => {
   return (
     <div className="bg-[#000000]">
       <CardCarousel items={heros} />
-      {/* <HeroSection /> */}
+
       <div className="flex justify-center text-center bg-[#000000]">
         <h1 className="font-bold text-white uppercase py-12 shadow text-9xl">
           <span className="mr-10">Buy</span> <br />{" "}
           <span className="ml-20">Post</span> <br /> earn
         </h1>
       </div>
+
       <MacbookScrollDemo />
 
       <CardHoverEffect />

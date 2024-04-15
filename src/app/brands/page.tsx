@@ -1,5 +1,5 @@
+import { BackgroundGradientAnimations } from "@/components/Bgradinet";
 import { CardHoverEffect } from "@/components/Card";
-import Footer from "@/components/Footer";
 
 import { InfiniteMovingCard } from "@/components/MovieCard";
 
@@ -15,9 +15,8 @@ function page() {
       </h2>
 
       <div className="text-center">
-        <h2 className="text-5xl text-center">HOW IT WORKS?</h2>
-        <p className="text-xl font-sans">WYLD TURNS YOUR CUSTOMERS,</p>
-        <p className="text-xl font-sans">INTO YOUR BRAND MARKETEERS</p>
+        <BackgroundGradientAnimations />
+
         <CardHoverEffect />
       </div>
 
@@ -38,8 +37,6 @@ function page() {
       </div>
 
       <InfiniteMovingCard />
-
-      <Footer />
     </div>
   );
 }
