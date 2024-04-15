@@ -8,11 +8,11 @@ import React from "react";
 function page() {
   return (
     <div className="bg-black text-white">
-      <h2 className="text-6xl py-4 text-center">
+      <div className="text-6xl py-4 text-center">
         <p>GET your customers</p>
         <p>to get you</p>
         <p>MORE customers!</p>
-      </h2>
+      </div>
 
       <div className="text-center">
         <BackgroundGradientAnimations />
@@ -23,7 +23,7 @@ function page() {
       <div className="bg-[#2c2584] py-4 shadow-black">
         <h2 className="text-4xl text-center">Earn first, Pay Later!</h2>
 
-        <p className="text-center">
+        <div className="text-center">
           <span>With WYLD, customers pay</span>
           <br />
           <span>full price upfront, directly</span>
@@ -33,7 +33,7 @@ function page() {
           <span>you only give back a small</span>
           <br />
           <span>portion as cashback</span>
-        </p>
+        </div>
       </div>
 
       <InfiniteMovingCard />

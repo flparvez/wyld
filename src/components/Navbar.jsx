@@ -53,7 +53,7 @@ function Navbar() {
                 Academy
               </li>
             </Link>
-            <Link href="/about">
+            <Link href="/faqs">
               <li className="ml-10 uppercase hover:border-b text-xl">Faqs</li>
             </Link>
           </ul>
