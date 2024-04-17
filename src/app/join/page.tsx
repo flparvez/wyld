@@ -4,7 +4,7 @@ import React from "react";
 function page() {
   return (
     <div className="bg-black">
-      <h2 className="text-white text-center">Apply Form</h2>
+      <h2 className="text-white text-center">Apply Form For Wyld</h2>
       <JoinForm />
     </div>
   );

@@ -8,5 +8,5 @@ import mongoose,{Schema,Document} from 'mongoose'
 }
 
 const UserSchema:Schema<Messeage> = new Schema({
-
+name:String,
 })
