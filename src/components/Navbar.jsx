@@ -48,10 +48,8 @@ function Navbar() {
                 Investors
               </li>
             </Link>
-            <Link href="/auth/register">
-              <li className="ml-10 uppercase hover:border-b text-xl">
-                Register
-              </li>
+            <Link href="/auth/login">
+              <li className="ml-10 uppercase hover:border-b text-xl">Login</li>
             </Link>
             <Link href="/faqs">
               <li className="ml-10 uppercase hover:border-b text-xl">Faqs</li>
@@ -97,12 +95,12 @@ function Navbar() {
               </li>
             </Link>
 
-            <Link href="/">
+            <Link href="/auth/login">
               <li
                 onClick={() => setMenuOpen(false)}
                 className="py-4 cursor-pointer"
               >
-                Academy
+                Login
               </li>
             </Link>
             <Link href="/faqs">

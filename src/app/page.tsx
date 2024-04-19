@@ -81,8 +81,6 @@ const Home = () => {
       <InfiniteMovingCard />
       <CardSlider items={sliders} />
 
-      <Footer />
-
       <div className="fixed py-4  w-full flex items-end justify-end right-5 bottom-0">
         <Button className="bg-[#d460d6]">
           <Link href="/join">Apply Now</Link>

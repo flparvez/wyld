@@ -1,11 +1,92 @@
-import React from "react";
+"use client";
+import React, { use, useEffect, useState } from "react";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+import { useRouter } from "next/navigation";
+
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+
+import { cn } from "@/utils/cn";
+
+import Link from "next/link";
 
 function Login() {
+  const router = useRouter();
+
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [buttonDisable, setButtonDisable] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const onLogin = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.post("/api/users/login", user);
+      console.log(response.data);
+      toast.success("Login Successfully");
+      router.push("/auth/profile");
+    } catch (error: any) {
+      console.log("Login failed", error);
+      toast.error(error.message);
+    }
+  };
+
   return (
-    <div className="bg-black">
-      <h2 className="text-white">Login Page</h2>
+    <div className="text-white bg-black flex flex-col items-center justify-center  min-h-screen py-2">
+      <h1>{loading ? "processing" : "Login Success"}</h1>
+      <h2 className="text-center text-white">Account Login</h2>
+
+      <LabelInputContainer className="mb-4">
+        <Label htmlFor="">Email</Label>
+        <Input
+          value={user.email}
+          id="email"
+          onChange={(e) => setUser({ ...user, email: e.target.value })}
+          placeholder="projectmayhem@fc.com"
+          type="email"
+          required
+        />
+      </LabelInputContainer>
+
+      <LabelInputContainer className="mb-4">
+        <Label htmlFor="password">Password</Label>
+        <Input
+          id="password"
+          value={user.password}
+          onChange={(e) => setUser({ ...user, password: e.target.value })}
+          placeholder="••••••••"
+          type="password"
+          required
+        />
+      </LabelInputContainer>
+
+      <button
+        onClick={onLogin}
+        className="bg-gradient-to-br relative group/btn from-zinc-900 to-zinc-900  block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+        type="submit"
+      >
+        Login
+      </button>
     </div>
   );
 }
 
 export default Login;
+
+const LabelInputContainer = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <div className={cn("flex flex-col lowercase space-y-2 w-full", className)}>
+      {children}
+    </div>
+  );
+};

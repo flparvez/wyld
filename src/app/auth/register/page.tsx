@@ -56,6 +56,7 @@ function RegisterPage() {
           onChange={(e) => setUser({ ...user, username: e.target.value })}
           placeholder="Enter Your Name"
           type="text"
+          required
         />
       </LabelInputContainer>
 
@@ -67,6 +68,7 @@ function RegisterPage() {
           onChange={(e) => setUser({ ...user, email: e.target.value })}
           placeholder="projectmayhem@fc.com"
           type="email"
+          required
         />
       </LabelInputContainer>
 
@@ -78,6 +80,7 @@ function RegisterPage() {
           onChange={(e) => setUser({ ...user, number: e.target.value })}
           placeholder="Enter Your Number"
           type="number"
+          required
         />
       </LabelInputContainer>
 
@@ -89,6 +92,7 @@ function RegisterPage() {
           onChange={(e) => setUser({ ...user, password: e.target.value })}
           placeholder="••••••••"
           type="password"
+          required
         />
       </LabelInputContainer>
 
