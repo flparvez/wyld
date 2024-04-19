@@ -45,7 +45,7 @@ isVerified:{
 
 isAdmin:{
     type:Boolean,
-    default:true,
+    default:false,
 },
 
 forgotPasswordToken:String,
