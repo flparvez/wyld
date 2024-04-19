@@ -3,19 +3,22 @@ import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 function Profile() {
   const router = useRouter();
   const [data, setData] = useState("nothing");
 
+  console.log(data);
   const getUserDetails = async () => {
     const response = await axios.get("/api/users/me");
-    console.log(response.data);
+    // console.log(response.data);
     setData(response.data.data._id);
   };
-
+  useEffect(() => {
+    getUserDetails();
+  }, []);
   const logout = async () => {
     try {
       await axios.get("/api/users/logout");
@@ -29,11 +32,12 @@ function Profile() {
   return (
     <div>
       <h2>Profile Page</h2>
-      <h2>
+
+      <h2 className="p-1 rounded bg-green-500">
         {data === "nothing" ? (
           "Nothing"
         ) : (
-          <Link href={`/profile/${data}`}>{data} </Link>
+          <Link href={`/auth/profile/${data}`}>{data}</Link>
         )}
       </h2>
       <hr />
