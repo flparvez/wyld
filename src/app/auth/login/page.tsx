@@ -39,7 +39,7 @@ function Login() {
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black">
       <h2 className="font-bold text-xl text-center text-neutral-200">
-        Account Create
+        Login Account
       </h2>
       <p className=" text-sm max-w-sm mt-2 text-center text-neutral-300">
         {loading ? "processing" : "Login Success"}

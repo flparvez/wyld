@@ -36,22 +36,17 @@ function Profile() {
     }
   };
   return (
-    <div>
-      <h2>Profile Page</h2>
+    <div className="py-4 my-4 bg-black justify-center text-center text-white">
+      <h2 className="my-4">Profile Page</h2>
 
-      <h2 className="p-1 rounded bg-green-500">
-        {data === "nothing" ? (
-          "Loading....."
-        ) : (
-          <Link href={`/auth/profile/${data}`}>{data}</Link>
-        )}
-      </h2>
+      <h2 className="">UserId:{data}</h2>
       <h1>Name: {username}</h1>
       <h1>Email {email}</h1>
       <h1>Number {number}</h1>
-      <hr />
 
-      <button onClick={logout}>Logout</button>
+      <button className="text-xl py-4" onClick={logout}>
+        Logout
+      </button>
     </div>
   );
 }
