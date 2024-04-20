@@ -37,5 +37,4 @@ export default function UserProfile({ params }: any) {
       </p>
     </div>
   );
-  s;
 }
