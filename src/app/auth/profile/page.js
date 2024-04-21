@@ -1,4 +1,6 @@
 "use client";
+
+import CustomerDashboard from "@/components/CustomerDashboard";
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -30,23 +32,26 @@ function Profile() {
       await axios.get("/api/users/logout");
       toast.success("Logout");
       router.push("/");
-    } catch (error: any) {
+    } catch (error) {
       console.log(error.message);
       toast.error(error.message);
     }
   };
   return (
-    <div className="py-4 my-4 bg-black justify-center text-center text-white">
-      <h2 className="my-4">Profile Page</h2>
+    <div className="py-4 my-4 bg-black justify-center  text-center text-white">
+      <div className="flex items-center  justify-between px-8">
+        <h2 className="text-xl font-medium text-center  text-white">
+          Welcome To Customer Dashbaord
+        </h2>
 
-      <h2 className="">UserId:{data}</h2>
-      <h1>Name: {username}</h1>
-      <h1>Email {email}</h1>
-      <h1>Number {number}</h1>
+        <div className="flex items-center ">
+          <button className="text-xl  text-red-900 py-2 " onClick={logout}>
+            Logout
+          </button>
+        </div>
+      </div>
 
-      <button className="text-xl py-4" onClick={logout}>
-        Logout
-      </button>
+      <CustomerDashboard username={username} email={email} userid={data} />
     </div>
   );
 }
