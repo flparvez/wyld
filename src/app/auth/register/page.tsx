@@ -21,7 +21,6 @@ function RegisterPage() {
     password: "",
   });
 
-  const [buttonDisable, setButtonDisable] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const onRegister = async () => {
@@ -36,12 +35,6 @@ function RegisterPage() {
       toast.error(error.message);
     }
   };
-  useEffect(() => {
-    if (user.email.length > 0 && user.password.length > 0) {
-    } else {
-      setButtonDisable(true);
-    }
-  }, [user]);
 
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black">
