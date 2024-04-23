@@ -15,7 +15,7 @@ function Profile() {
   const [email, setEmail] = useState(null);
   const [number, setNumber] = useState(null);
 
-  console.log(data);
+  // console.log(data);
   const getUserDetails = async () => {
     const response = await axios.get("/api/users/me");
     // console.log(response.data);
