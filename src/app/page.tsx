@@ -4,7 +4,7 @@ import Marquee from "../components/Marquee";
 import { MacbookScrollDemo } from "@/components/macbook";
 import { Button } from "@/components/ui/moving-border";
 import CardCarousel from "../components/CardCarasol";
-import Footer from "@/components/Footer";
+
 import Link from "next/link";
 import CardSlider from "@/components/CardSlider";
 import React from "react";
@@ -20,17 +20,17 @@ const Home = () => {
       text2: "FUELLED BY LIKES & SHARE",
     },
 
-    // {
-    //   id: 2,
-    //   text1: "encash your influence",
-    //   text2: "BECause your word is your worth",
-    // },
+    {
+      id: 2,
+      text1: "encash your influence",
+      text2: "BECause your word is your worth",
+    },
 
-    // {
-    //   id: 3,
-    //   text1: "UPTO 100% cashback ",
-    //   text2: "More followers = More CASHBACK",
-    // },
+    {
+      id: 3,
+      text1: "UPTO 100% cashback ",
+      text2: "More followers = More CASHBACK",
+    },
   ];
 
   const sliders = [
@@ -59,10 +59,20 @@ const Home = () => {
   return (
     <div className="bg-[#000000]">
       <CardCarousel items={heros} />
+      <div className="mt-4 flex text-center justify-center">
+        <Link href={"/join"}>
+          <Button
+            borderRadius="1rem"
+            className=" bg-[#c760dd]  text-white border-neutral-200 dark:border-slate-800"
+          >
+            Apply Now
+          </Button>
+        </Link>
+      </div>
 
       <div className="flex justify-center text-center bg-[#000000]">
         <h1 className="font-bold text-white uppercase py-12 shadow text-9xl">
-          <span className="mr-10">Buy</span> <br />{" "}
+          <span className="mr-10">Buy</span> <br />
           <span className="ml-20">Post</span> <br /> earn
         </h1>
       </div>

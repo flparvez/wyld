@@ -9,8 +9,6 @@ import { Input } from "@/components/ui/input";
 
 import { cn } from "@/utils/cn";
 
-import Link from "next/link";
-
 function Login() {
   const router = useRouter();
 
