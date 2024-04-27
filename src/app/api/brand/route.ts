@@ -10,7 +10,7 @@ connect()
 export async function POST(request:NextRequest){
 try {
      const reqBody =  await request.json()
-const {name,slug,logo,discount,condition} = reqBody
+const {name,logo,discount,condition} = reqBody
 
 // Validation
 const brand = await Brand.findOne({name})

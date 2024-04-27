@@ -1,6 +1,6 @@
 import React from "react";
 
-function CustomerDashboard({ username, email, userid }) {
+function CustomerDashboard({ username, email }) {
   let score = 34;
   return (
     <div className="flex flex-col  bg-black p-4 rounded shadow-md">

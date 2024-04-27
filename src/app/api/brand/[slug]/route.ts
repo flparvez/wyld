@@ -1,5 +1,7 @@
 import { connect } from "@/dbConfig/dbConfig";
 import Brand from "@/model/BrandModel";
+import slugify from 'slugify';
+
 
 
 
@@ -33,23 +35,32 @@ export async function PUT(request:NextRequest,context:any){
 
 
 try {
-     const reqBody =  await request.json()
+         const reqBody =  await request.json()
+const {name,logo,discount,condition} = reqBody
 
-
+console.log(reqBody)
 
      const { slug } = context.params;
-     const result = await Brand.findOne({slug:slug},reqBody)
-     let success= true
+     const result = await Brand.findOne({slug:slug})
+    //  let success= true
 // Validation
-if (result) {
-    success:true
-}
+// if (result) {
+//     success:true
+// }
 
+result.name= name
+result.slug= slugify(name)
+result.logo = logo
+result.discount =discount
+result.condition = condition
+
+   await result.save();
 
 return NextResponse.json({
     message:"Brand Edit Successfully",
-    success,
+    success:true,
     result
+    
 })
 
 
