@@ -58,7 +58,7 @@ function CustomerBrandCarasol({ items }) {
                         {item.discount}% Discount
                       </p>
 
-                      <p className="text-xl font-bold text-white sm:text-2xl">
+                      <p className="text-xl uppercase font-bold text-white sm:text-2xl">
                         {item.name}
                       </p>
 
