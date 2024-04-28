@@ -5,8 +5,11 @@ import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+import CustomerBrandCarasol from "@/components/CustomerBrandCarasol";
+
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
 function Profile() {
   const router = useRouter();
@@ -15,7 +18,15 @@ function Profile() {
   const [email, setEmail] = useState(null);
   const [number, setNumber] = useState(null);
 
+  const [brandSData, setBrandsData] = useState(null);
+
   // console.log(data);
+  const getBrandData = async () => {
+    const response = await axios.get("/api/brand");
+    setBrandsData(response.data.data);
+    console.log(response);
+  };
+
   const getUserDetails = async () => {
     const response = await axios.get("/api/users/me");
     // console.log(response.data);
@@ -26,6 +37,7 @@ function Profile() {
   };
   useEffect(() => {
     getUserDetails();
+    getBrandData();
   }, []);
   const logout = async () => {
     try {
@@ -37,21 +49,23 @@ function Profile() {
       toast.error(error.message);
     }
   };
+
   return (
     <div className="py-4 my-4 bg-black justify-center  text-center text-white">
       <div className="flex items-center  justify-between px-8">
-        <h2 className="text-xl font-medium text-center  text-white">
+        <h2 className="text-pretty uppercase font-medium text-center  text-white">
           Welcome To Customer Dashbaord
         </h2>
 
         <div className="flex items-center ">
-          <button className="text-xl  text-red-900 py-2 " onClick={logout}>
+          <button className="text-wrap  text-red-900 py-2 " onClick={logout}>
             Logout
           </button>
         </div>
       </div>
-
       <CustomerDashboard username={username} email={email} userid={data} />
+
+      <CustomerBrandCarasol items={brandSData} />
     </div>
   );
 }

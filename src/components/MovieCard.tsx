@@ -7,7 +7,7 @@ export function InfiniteMovingCard() {
   return (
     <div className="h-[10rem] rounded-md flex flex-col antialiased bg-black bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
       <h2 className="text-white text-3xl text-center font-bold">
-        some brands that love us
+        Some Brands That Love Us
       </h2>
       <InfiniteMovingCards items={brands} direction="left" speed="fast" />
     </div>

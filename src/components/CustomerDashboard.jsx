@@ -6,7 +6,6 @@ function CustomerDashboard({ username, email }) {
     <div className="flex flex-col  bg-black p-4 rounded shadow-md">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center space-x-2">
-          <p className="text-sm text-white">Name:</p>
           <span className="text-sm font-medium text-white">{username}</span>
         </div>
 
