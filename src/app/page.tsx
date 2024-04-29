@@ -57,7 +57,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="bg-[#000000]">
+    <div className="m-0 p-0 bg-black">
       <CardCarousel items={heros} />
       <div className="mt-4 flex text-center justify-center">
         <Link href={"/join"}>

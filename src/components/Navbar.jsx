@@ -19,7 +19,7 @@ function Navbar() {
   };
   return (
     <nav className="fixed z-10 w-full h-16 shadow-xl  bg-black ">
-      <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
+      <div className="flex justify-between items-center h-full  px-4 2xl:px-16">
         <div className="w-36">
           <Link href="/">
             <Image

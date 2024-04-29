@@ -19,7 +19,7 @@ import { Spotlight } from "./ui/Spotlight";
 import { Button } from "./ui/button";
 function CardSlider({ items }) {
   return (
-    <div className="  w-full h-full text-white  bg-[#02101d] rounded-md items-center justify-center relative overflow-hidden mx-auto py-10 ">
+    <div className="   text-white  bg-[#02101d] rounded-md items-center justify-center relative overflow-hidden mx-auto py-10 ">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}

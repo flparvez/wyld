@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 // const inter = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 
-const inter = Inter({ subsets: ["latin"], weight: ["400"] });
+const inter = Poppins({ subsets: ["latin"], weight: ["300"] });
 
 export const metadata: Metadata = {
   title: "Maximize Earning With Wyld",
@@ -21,11 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="h-full w-full bg-black">
-          <div>
+        <div className=" bg-black">
+          <div className="pb-10">
             <Navbar />
           </div>
-          <div className="pt-16 bg-black">{children}</div>
+          <div className=" bg-black  m-0 p-0">{children}</div>
 
           <div className="bg-black">
             <Footer />

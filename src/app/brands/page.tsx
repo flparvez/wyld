@@ -8,7 +8,7 @@ import React from "react";
 
 function page() {
   return (
-    <div className="bg-black text-white">
+    <div className="w-full bg-black text-white">
       <div className="text-6xl uppercase py-4 text-center font-medium">
         <p>GET your Customers</p>
         <br />
