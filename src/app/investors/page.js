@@ -47,9 +47,9 @@ function InvestorPage() {
   ];
 
   return (
-    <div className="bg-black px-4 py-4">
+    <div className="bg-black px-4 my-8">
       <div>
-        <h1 className="sm:text-9xl text-6xl uppercase text-white sm:text-center">
+        <h1 className="sm:text-9xl text-5xl uppercase text-white sm:text-center">
           investors
         </h1>
 

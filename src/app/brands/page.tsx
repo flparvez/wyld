@@ -8,8 +8,8 @@ import React from "react";
 
 function page() {
   return (
-    <div className="w-full bg-black text-white">
-      <div className="text-6xl uppercase py-4 text-center font-medium">
+    <div className="w-full mt-8 bg-black text-white">
+      <div className="sm:text-6xl text-5xl uppercase py-4 text-center font-medium">
         <p>GET your Customers</p>
         <br />
         <p>to get you</p>
@@ -18,7 +18,7 @@ function page() {
       </div>
 
       <div className="text-center">
-        <h2 className="text-5xl font-medium mb-4">HOW IT WORKS?</h2>
+        <h2 className="sm:text-5xl text-4xl font-medium mb-4">HOW IT WORKS?</h2>
         <p className="text-xl font-serif">
           <span>WYLD TURNS YOUR</span> <br />
           <span>CUSTOMERS,</span> <br />
